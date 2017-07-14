@@ -35,10 +35,10 @@ hostnum = 0
 
 do k = 1, num
   if (num == 1) then
-    open(111,file='access_log')
+    open(111,file='/var/log/httpd/access_log')
   else if (num > 1) then
     write(line,*) k
-    open(111,file='access_log.'//trim(adjustl(line)))
+    open(111,file='/var/log/httpd/access_log.'//trim(adjustl(line)))
   else
     write(*,*) 'error'
   end if

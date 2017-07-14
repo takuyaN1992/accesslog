@@ -1,2 +1,8 @@
 # accesslog
 analyzing access logs
+実行すると/var/log/httpd/access_logを読み込み、時間帯ごとの集計をtime.logにリモートホストごとの集計をhost.logに出力します
+ログファイルが複数存在する場合はファイルの数を指定すると/var/log/httpd/access_log.nを順に読み込みます
+期間を指定する場合は開始日と終了日をYYYYMMDDの形式で指定してください
+時間帯ごとに集計で時間幅を変更する場合は変数dtimeを変更することで秒単位で変更することができます
+リモートホストの数が一万を超えると正常に実行できません
+そのような場合は宣言文のhost,host2の
